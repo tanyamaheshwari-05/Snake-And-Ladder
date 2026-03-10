@@ -1,0 +1,1 @@
+print("Welcome to Sanke and Ladder game")
