@@ -15,7 +15,7 @@ def option_choose():
     options=["No play","Snake","Ladder"]
     return random.choice(options)
 
-while p1<100:
+while position1<100:
     dice= roll_dice()
     option=option_choose()
 
@@ -23,10 +23,11 @@ while p1<100:
         print("Player stays at the same position : ",position1)
 
     elif (option=="Ladder"):
-        position1+=dice
+        if position1 + dice <= 100 :
+            position1+=dice
 
     elif(option=="Snake"):
         position1-=dice
         if(position1<0):
             position1=0
-print("Player reached 100 and win!")
+
